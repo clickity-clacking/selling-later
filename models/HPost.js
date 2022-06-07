@@ -76,4 +76,4 @@ HPost.init(
   }
 );
 
-module.exports = Post;
+module.exports = HPost;
