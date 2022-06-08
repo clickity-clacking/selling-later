@@ -1,5 +1,5 @@
-// const router = require('express').Router();
-// const { Post, User } = require('../../models');
+const router = require('express').Router();
+const { Post, User } = require('../../models');
 
 // // // get all users
 // // router.get('/', (req, res) => {
@@ -103,4 +103,4 @@
 // //     });
 // // });
 
-// // module.exports = router;
+module.exports = router;
