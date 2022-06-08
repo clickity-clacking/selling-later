@@ -33,39 +33,27 @@ HPost.init(
       }
     },
     price_floor: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'user',
-        key: 'id'
-      }
+      type: DataTypes.INTEGER,      
+      allowNull: false
+
     },
     price_ceiling: {
       type: DataTypes.INTEGER,
-      references: {
-        model: 'user',
-        key: 'id'
-      }
+      allowNull: false
+
     },
     beds: {
       type: DataTypes.INTEGER,
-      references: {
-        model: 'user',
-        key: 'id'
-      }
+      allowNull: false
     },
     baths: {
       type: DataTypes.INTEGER,
-      references: {
-        model: 'user',
-        key: 'id'
-      }
+      allowNull: false
     },
     sqft: {
       type: DataTypes.INTEGER,
-      references: {
-        model: 'user',
-        key: 'id'
-      }
+      allowNull: false
+
     }
   },
   {
