@@ -34,38 +34,43 @@ HPost.init(
     },
     price_floor: {
       type: DataTypes.INTEGER,
-      references: {
-        model: 'user',
-        key: 'id'
-      }
+      allowNull: false,
+      // references: {
+      //   model: 'user',
+      //   key: 'id'
+      // }
     },
     price_ceiling: {
       type: DataTypes.INTEGER,
-      references: {
-        model: 'user',
-        key: 'id'
-      }
+      allowNull: false,
+      // references: {
+      //   model: 'user',
+      //   key: 'id'
+      // }
     },
     beds: {
       type: DataTypes.INTEGER,
-      references: {
-        model: 'user',
-        key: 'id'
-      }
+      allowNull: false,
+      // references: {
+      //   model: 'user',
+      //   key: 'id'
+      // }
     },
     baths: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'user',
-        key: 'id'
-      }
+      type: DataTypes.DECIMAL,
+      allowNull: false,
+      // references: {
+      //   model: 'user',
+      //   key: 'id'
+      // }
     },
     sqft: {
       type: DataTypes.INTEGER,
-      references: {
-        model: 'user',
-        key: 'id'
-      }
+      allowNull: false,
+      // references: {
+      //   model: 'user',
+      //   key: 'id'
+      // }
     }
   },
   {
