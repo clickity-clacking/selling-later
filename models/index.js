@@ -3,12 +3,12 @@ const { post } = require("../controllers");
 const HPost = require("./HPost");
 const User = require("./user");
 
-post.belongTo(User, {
+HPost.belongsTo(User, {
   foreignKey: "userId",
-  onDelete: " CASCADE",
+  onDelete: "CASCADE",
 });
 
 module.exports = {
   User,
-  Post,
+  HPost,
 };
