@@ -12,5 +12,5 @@ const seedDatabase = async () => {
   await hpostseed.bulkcreate(hpostseed);
   console.log("finish");
   process.exit(0);
-};
+};  
 seedDatabase();
