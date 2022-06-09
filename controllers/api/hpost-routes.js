@@ -1,17 +1,19 @@
 const router = require('express').Router();
-const { Post, User } = require('../../models');
+const { registerPrompt } = require('inquirer');
+const { HPost, User } = require('../../models');
 
 // get all users
 router.get('/', (req, res) => {
-  Post.findAll({
-    attributes: ['id', 'post_url', 'title', 'created_at'],
+    // HPost.findAll()
+  HPost.findAll({
+    attributes: ['id', 'post_url', 'address', 'created_at'],
     order: [['created_at', 'DESC']],
-    include: [
-      {
-        model: User,
-        attributes: ['username']
-      }
-    ]
+    // include: [
+    //   {
+    //     model: User,
+    //     attributes: ['username']
+    //   }
+    // ]
   })
     .then(dbPostData => res.json(dbPostData))
     .catch(err => {
@@ -21,17 +23,17 @@ router.get('/', (req, res) => {
 });
 
 router.get('/:id', (req, res) => {
-  Post.findOne({
+  HPost.findOne({
     where: {
       id: req.params.id
     },
-    attributes: ['id', 'post_url', 'title', 'created_at'],
-    include: [
-      {
-        model: User,
-        attributes: ['username']
-      }
-    ]
+    attributes: ['id', 'post_url', 'address', 'created_at'],
+    // include: [
+    //   {
+    //     model: User,
+    //     attributes: ['username']
+    //   }
+    // ]
   })
     .then(dbPostData => {
       if (!dbPostData) {
@@ -47,10 +49,16 @@ router.get('/:id', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-  // expects {title: 'Taskmaster goes public!', post_url: 'https://taskmaster.com/press', user_id: 1}
-  Post.create({
-    title: req.body.title,
+
+  HPost.create({
+    address: req.body.address,
+    sell_date: req.body.sell_date,
     post_url: req.body.post_url,
+    price_floor: req.body.price_floor,
+    price_ceiling: req.body.price_ceiling,
+    beds: req.body.beds,
+    baths: req.body.baths,
+    sqft: req.body.sqft,
     user_id: req.body.user_id
   })
     .then(dbPostData => res.json(dbPostData))
@@ -61,9 +69,16 @@ router.post('/', (req, res) => {
 });
 
 router.put('/:id', (req, res) => {
-  Post.update(
+  HPost.update(
     {
-      title: req.body.title
+        address: req.body.address,
+        sell_date: req.body.sell_date,
+        post_url: req.body.post_url,
+        price_floor: req.body.price_floor,
+        price_ceiling: req.body.price_ceiling,
+        beds: req.body.beds,
+        baths: req.body.baths,
+        sqft: req.body.sqft,
     },
     {
       where: {
@@ -85,7 +100,7 @@ router.put('/:id', (req, res) => {
 });
 
 router.delete('/:id', (req, res) => {
-  Post.destroy({
+  HPost.destroy({
     where: {
       id: req.params.id
     }
