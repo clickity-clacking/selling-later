@@ -1,9 +1,15 @@
-function openForm() {
-  document.getElementById("myForm").style.display = "block";
+function openLoginForm() {
+  document.getElementById("loginForm").style.display = "block";
+}
+function openRegisterForm() {
+  document.getElementById("registerForm").style.display = "block";
 }
 
-function closeForm() {
-  document.getElementById("myForm").style.display = "none";
+function closeLoginForm() {
+  document.getElementById("loginForm").style.display = "none";
+}
+function closeRegisterForm() {
+  document.getElementById("registerForm").style.display = "none";
 }
 
 
@@ -59,6 +65,6 @@ async function signupFormHandler(event) {
   }
 }
 
-document.querySelector('.form-popup').addEventListener('submit', loginFormHandler);
+document.querySelector('.login-form-popup').addEventListener('submit', loginFormHandler);
 
-document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);
+document.querySelector('.register-form-popup').addEventListener('submit', signupFormHandler);
