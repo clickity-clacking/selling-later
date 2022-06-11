@@ -1,15 +1,16 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
-
-// router.get('/', (req, res) => {
-//   console.log('======================');
-//   res.render('homepage');
-// });
-
-
 const { HPost, User } = require('../models');
 
 router.get('/', (req, res) => {
+  console.log('======================');
+  res.render('homepage');
+});
+
+
+
+
+router.get('/listings', (req, res) => {
   console.log('======================');
   HPost.findAll({
     attributes: ['id', 'address', 'sell_date', 'post_url', 'price_floor', 'price_ceiling', 'beds', 'baths', 'sqft', 'created_at'],
@@ -23,7 +24,7 @@ router.get('/', (req, res) => {
   })
   .then(dbPostData => {
     const posts = dbPostData.map(post => post.get({ plain: true }));
-    res.render('homepage', { posts });
+    res.render('listings', { posts });
   })
   .catch(err => {
     console.log(err);
