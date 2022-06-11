@@ -20,12 +20,12 @@ router.get('/:id', (req, res) => {
     where: {
       id: req.params.id
     },
-    // include: [
-    //   {
-    //     model: Post,
-    //     attributes: ['id', 'title', 'post_url', 'created_at']
-    //   }
-    // ]
+    include: [
+      {
+        model: HPost,
+        attributes: ['id', 'address', 'sell_date', 'post_url', 'price_floor', 'price_ceiling', 'beds', 'baths', 'sqft', 'created_at']
+      }
+    ]
   })
     .then(dbUserData => {
       if (!dbUserData) {

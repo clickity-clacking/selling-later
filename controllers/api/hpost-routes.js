@@ -6,7 +6,7 @@ const { HPost, User } = require('../../models');
 router.get('/', (req, res) => {
     // HPost.findAll()
   HPost.findAll({
-    attributes: ['id', 'post_url', 'address', 'created_at'],
+    attributes: ['id', 'address', 'sell_date', 'post_url', 'price_floor', 'price_ceiling', 'beds', 'baths', 'sqft', 'created_at'],
     order: [['created_at', 'DESC']],
     include: [
       {
@@ -27,7 +27,7 @@ router.get('/:id', (req, res) => {
     where: {
       id: req.params.id
     },
-    attributes: ['id', 'post_url', 'address', 'created_at'],
+    attributes: ['id', 'address', 'sell_date', 'post_url', 'price_floor', 'price_ceiling', 'beds', 'baths', 'sqft', 'created_at'],
     include: [
       {
         model: User,
