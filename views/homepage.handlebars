@@ -1,1 +1,20 @@
 <div>You are on the homepage</div>
+
+<ol>
+{{#each posts as |hpost|}}
+  <li>
+    <article>
+      <div>
+        <h2>{{hpost.address}}</h2>
+        <span>({{hpost.post_url}})</span>
+      </div>
+      <div>
+        {{hpost.sell_date}}
+        by {{hpost.user.username}} on
+        {{hpost.created_at}}
+        |
+      </div>
+    </article>
+  </li>
+  {{/each}}
+</ol>
