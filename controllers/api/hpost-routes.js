@@ -2,18 +2,18 @@ const router = require('express').Router();
 const { registerPrompt } = require('inquirer');
 const { HPost, User } = require('../../models');
 
-// get all users
+// get all hposts
 router.get('/', (req, res) => {
     // HPost.findAll()
   HPost.findAll({
     attributes: ['id', 'post_url', 'address', 'created_at'],
     order: [['created_at', 'DESC']],
-    // include: [
-    //   {
-    //     model: User,
-    //     attributes: ['username']
-    //   }
-    // ]
+    include: [
+      {
+        model: User,
+        attributes: ['username']
+      }
+    ]
   })
     .then(dbPostData => res.json(dbPostData))
     .catch(err => {
@@ -28,12 +28,12 @@ router.get('/:id', (req, res) => {
       id: req.params.id
     },
     attributes: ['id', 'post_url', 'address', 'created_at'],
-    // include: [
-    //   {
-    //     model: User,
-    //     attributes: ['username']
-    //   }
-    // ]
+    include: [
+      {
+        model: User,
+        attributes: ['username']
+      }
+    ]
   })
     .then(dbPostData => {
       if (!dbPostData) {

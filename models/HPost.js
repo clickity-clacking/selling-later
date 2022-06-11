@@ -71,13 +71,21 @@ HPost.init(
       //   model: 'user',
       //   key: 'id'
       // }
+    },
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id'
+      }
+
     }
   },
   {
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'post'
+    modelName: 'hpost'
   }
 );
 
