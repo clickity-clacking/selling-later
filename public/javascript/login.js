@@ -1,20 +1,31 @@
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+
+
 async function loginFormHandler(event) {
   event.preventDefault();
 
-  const email = document.querySelector('#email-login').value.trim();
-  const password = document.querySelector('#password-login').value.trim();
+  const login = document.querySelector('#login').value.trim();
+  const password = document.querySelector('#psw').value.trim();
 
-  if (email && password) {
+  if (login && password) {
     const response = await fetch('/api/users/login', {
       method: 'post',
       body: JSON.stringify({
-        email,
+        login,
         password
       }),
+      // header telling API content type it's sending is in json format
       headers: { 'Content-Type': 'application/json' }
     });
 
     if (response.ok) {
+      //will take us to 
       document.location.replace('/dashboard/');
     } else {
       alert(response.statusText);
@@ -48,6 +59,6 @@ async function signupFormHandler(event) {
   }
 }
 
-document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
+document.querySelector('.form-popup').addEventListener('submit', loginFormHandler);
 
 document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);
