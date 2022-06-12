@@ -16,6 +16,13 @@
     </header>
     <nav>
         <a href="/listings">Show Listings</a>
+        {{!-- {{#if loggedIn}} --}}
+        <a href="/new-listing">Create New Listing</a>
+        {{!-- <a href="/dashboard">dashboard</a> --}}
+        <button id="logout" class="btn-no-style">logout</button>
+        {{!-- {{else}} --}}
+        <a href="/login">login</a>
+        {{!-- {{/if}} --}}
     </nav>
     <main>
       {{{ body }}}
@@ -25,6 +32,7 @@
     </footer>
   </div>
 
+  <script src="/javascript/logout.js"></script>
 </body>
 
 </html>
