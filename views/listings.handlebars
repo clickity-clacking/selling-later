@@ -2,6 +2,16 @@
   <a href="/new-listing">Create New Listing</a>
 </nav> --}}
 
+<div>
+      <label>Search By Price Range:</label>
+      <select name="price-search">
+        <option value="<500000">Under 500000</option>
+        <option value="500000-700000">500000-700000</option>
+        <option value="700000-900000">700000-900000</option>
+        <option value="900000-1200000">900000-1200000</option>
+      </select>
+</div>  
+
 <ol>
 {{#each posts as |hpost|}}
   <li>
@@ -22,3 +32,5 @@
 </ol>
 
 {{!-- search.houses copy.handlebars --}}
+
+<script src="/javascript/listings.js"></script>

@@ -39,4 +39,36 @@
   </form>
 </section>
 
+{{!-- {{#if hposts.length}} --}}
+<section>
+  <h2>Your Posts</h2>
+  <ol>
+{{#each posts as |hpost|}}
+  <li>
+    <article>
+      <div>
+        <h2>{{hpost.address}}</h2>
+        <span>({{hpost.post_url}})</span>
+      </div>
+      <div>Approx Sell Date: {{hpost.sell_date}}</div>
+      <div>Price Range: {{hpost.price_floor}} - {{hpost.price_ceiling}}</div>
+      <div>{{hpost.beds}}Beds, {{hpost.baths}}Ba</div>
+      <div>Sqft: {{sqft}}</div>
+      <div>by {{hpost.user.username}} on {{hpost.created_at}}</div>
+      
+    </article>
+  </li>
+  {{/each}}
+</ol>
+  {{!-- <ol>
+    {{#each hposts as |hpost|}}
+    <li>
+      {{> post-info post}}
+      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+    </li>
+    {{/each}}
+  </ol> --}}
+</section>
+{{!-- {{/if}} --}}
+
 <script src="/javascript/new-listing.js"></script>
