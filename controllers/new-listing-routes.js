@@ -15,6 +15,7 @@ router.get('/', (req, res) => {
       user_id: req.session.user_id
     },
     attributes: [
+      'id',
       'address',
       'sell_date',
       'post_url',
@@ -36,9 +37,9 @@ router.get('/', (req, res) => {
       }
     ]
   })
-    .then(dbPostData => {
-      const posts = dbPostData.map(post => post.get({ plain: true }));
-      res.render('new-listing', { posts, loggedIn: true });
+    .then(dbHPostData => {
+      const hposts = dbHPostData.map(hpost => hpost.get({ plain: true }));
+      res.render('new-listing', { hposts, loggedIn: true });
     })
     .catch(err => {
       console.log(err);

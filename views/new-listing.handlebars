@@ -41,9 +41,9 @@
 
 {{!-- {{#if hposts.length}} --}}
 <section>
-  <h2>Your Posts</h2>
+  <h2>My Listings</h2>
   <ol>
-{{#each posts as |hpost|}}
+{{#each hposts as |hpost|}}
   <li>
     <article>
       <div>
@@ -57,6 +57,7 @@
       <div>by {{hpost.user.username}} on {{hpost.created_at}}</div>
       
     </article>
+    <a href="/edit-listing/{{hpost.id}}" class="edit-link">Edit Listing</a>
   </li>
   {{/each}}
 </ol>

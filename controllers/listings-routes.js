@@ -14,9 +14,9 @@ router.get('/', (req, res) => {
         }
       ]
     })
-    .then(dbPostData => {
-      const posts = dbPostData.map(post => post.get({ plain: true }));
-      res.render('listings', { posts });
+    .then(dbHPostData => {
+      const hposts = dbHPostData.map(hpost => hpost.get({ plain: true }));
+      res.render('listings', { hposts });
     })
     .catch(err => {
       console.log(err);
