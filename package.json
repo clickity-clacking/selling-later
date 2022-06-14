@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "start": "node server.js",
-    "seeds": "node seeds/seed.js"
+    "script": "node seeds/seed.js"
   },
   "keywords": [],
   "author": "",
