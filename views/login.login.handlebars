@@ -1,0 +1,46 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selling Later</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<header>
+  <a href="default.asp">Selling Later Logo</a>
+  <div class = "signup-bar">    
+    <button onclick="openLoginForm()">Sign In</button>
+    <button onclick="openRegisterForm()">Sign Up</button>
+  </div>
+  <ul class = "nav-bar">
+    <li><a href="default.asp">View Homes</a></li>
+    <li><a href="default.asp">Save</a></li>
+    <li><a href="default.asp">How It Works</a></li>
+    <li><a href="default.asp">Learn</a></li>
+    <li><a href="default.asp">Stories</a></li>
+  </ul>
+  
+  <div class="wrapper">
+    <header>
+      <button type="button">Tell Buyers Now</button>
+      <button type="button">Learn How To Save</button>
+    </header>
+  </div>
+</header>
+
+
+<div class="login-container">  
+<div class="login-form-popup" id="loginForm">
+    <form action="/action_page.php" class="form-container">
+    <h1>Login</h1>
+
+    <label for="login"><b>Email or Username</b></label>
+    <input type="text" placeholder="Enter Email or Username" id="login" name="login" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" id="psw" name="psw" required>
+
+    <button type="submit" class="btn">Login</button>
+    <button type="button" class="btn cancel" onclick="closeLoginForm()">Close</button>
+    </form>
+</div>
+</div> 

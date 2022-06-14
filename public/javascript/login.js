@@ -32,7 +32,7 @@ async function loginFormHandler(event) {
 
     if (response.ok) {
       //will take us to 
-      document.location.replace('/dashboard/');
+      document.location.assign('/dashboard/');
     } else {
       alert(response.statusText);
     }
@@ -42,9 +42,9 @@ async function loginFormHandler(event) {
 async function signupFormHandler(event) {
   event.preventDefault();
 
-  const username = document.querySelector('#username-signup').value.trim();
-  const email = document.querySelector('#email-signup').value.trim();
-  const password = document.querySelector('#password-signup').value.trim();
+  const username = document.querySelector('#un').value.trim();
+  const email = document.querySelector('#email').value.trim();
+  const password = document.querySelector('#newPsw').value.trim();
 
   if (username && email && password) {
     const response = await fetch('/api/users', {
@@ -58,7 +58,7 @@ async function signupFormHandler(event) {
     });
 
     if (response.ok) {
-      document.location.replace('/dashboard/');
+      document.location.assign('/dashboard/');
     } else {
       alert(response.statusText);
     }
