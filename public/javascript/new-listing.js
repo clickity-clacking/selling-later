@@ -28,7 +28,7 @@ async function newFormHandler(event) {
     });
   
     if (response.ok) {
-      document.location.replace('/listings');
+      document.location.replace('/new-listing');
     } else {
       alert(response.statusText);
     }
