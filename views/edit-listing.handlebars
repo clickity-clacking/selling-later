@@ -1,0 +1,44 @@
+<article>
+  <h2>
+    Edit Listing
+  </h2>
+  <form class="new-listing-form">
+    <div>
+      <label>Address</label>
+      <input type="text" name="address" value="{{hpost.address}}" />
+    </div>
+    <div>
+    <div>
+      <label>Sell Date</label>
+      <input type="text" name="sell_date" value="{{hpost.sell_date}}"/>
+    </div>
+    <div>
+      <label>Link</label>
+      <input name="post_url" value="{{hpost.post_url}}"/>
+    </div>
+    <div>
+      <label>Price Floor</label>
+      <input type="text" name="price_floor" value="{{hpost.price_floor}}"/>
+    </div>  
+    <div>
+      <label>Price Ceiling</label>
+      <input type="text" name="price_ceiling" value="{{hpost.price_ceiling}}"/>
+    </div>   
+    <div>
+      <label>Bedrooms</label>
+      <input type="text" name="beds" value="{{hpost.beds}}"/>
+    </div> 
+    <div>
+      <label>Bathrooms</label>
+      <input type="text" name="baths" value="{{hpost.baths}}"/>
+    </div>
+    <div>
+      <label>Sqft</label>
+      <input type="text" name="sqft" value="{{hpost.sqft}}"/>
+    </div>    
+    <button type="submit">Save Listing!</button>
+    <button type="button" class="delete-hpost-btn">Delete post</button>
+  </form>
+</article>
+
+  <script src="/javascript/edit-listing.js"></script>

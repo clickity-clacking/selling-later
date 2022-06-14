@@ -12,11 +12,11 @@
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.1",
-    "bootstrap": "^5.2.0-beta1",
+    "connect-session-sequelize": "^7.1.4",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "express-handlebars": "^6.0.6",
-    "inquirer": "^8.2.4",
+    "express-session": "^1.17.3",
     "mysql2": "^2.3.3",
     "s": "^1.0.0",
     "sequelize": "^6.20.1"
