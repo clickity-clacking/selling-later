@@ -6,11 +6,10 @@
 </head>
 
 <header>
-  <a href="default.asp">Selling Later Logo</a>
-  <div class = "signup-bar">    
-    <button onclick="openLoginForm()">Sign In</button>
-    <button onclick="openRegisterForm()">Sign Up</button>
-  </div>
+  <a href="https://www.sellinglater.com">
+  <img alt="Selling Later" src="public/images/logo.png"
+    width="150" height="70">
+  </a>
   <ul class = "nav-bar">
     <li><a href="default.asp">View Homes</a></li>
     <li><a href="default.asp">Save</a></li>
@@ -18,29 +17,33 @@
     <li><a href="default.asp">Learn</a></li>
     <li><a href="default.asp">Stories</a></li>
   </ul>
-  
-  <div class="wrapper">
-    <header>
-      <button type="button">Tell Buyers Now</button>
-      <button type="button">Learn How To Save</button>
-    </header>
-  </div>
+ <button onclick="openLoginForm()">Sign In</button>
+ <button onclick="openRegisterForm()">Sign Up</button>
 </header>
 
 
 <div class="login-container">  
-<div class="login-form-popup" id="loginForm">
-    <form action="/action_page.php" class="form-container">
-    <h1>Login</h1>
+    <div class="login-form-popup" id="loginForm">
+        <form action="/action_page.php" class="form-container">
+        <h1>Login</h1>
 
-    <label for="login"><b>Email or Username</b></label>
-    <input type="text" placeholder="Enter Email or Username" id="login" name="login" required>
+        <label for="login"><b>Email or Username</b></label>
+        <input type="text" placeholder="Enter Email or Username" id="login" name="login" required>
 
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" id="psw" name="psw" required>
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" id="psw" name="psw" required>
 
-    <button type="submit" class="btn">Login</button>
-    <button type="button" class="btn cancel" onclick="closeLoginForm()">Close</button>
-    </form>
-</div>
+        <button onclick= "loginFormHandler()" type="submit" class="btn">Login</button>
+        </form>
+    </div>
 </div> 
+
+<footer>
+  <a href="https://www.sellinglater.com">
+  <img alt="Selling Later" src="public/images/logo.png"
+    width="150" height="70">
+  </a>
+  <div class = "signup-bar">   
+</footer>
+
+<script src=".../public/javascript/login.js"></script>
