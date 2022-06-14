@@ -21,17 +21,22 @@
  <button onclick="openRegisterForm()">Sign Up</button>
 </header>
 
-<div class = ></div>
 
-<div class = "bpost-container">
-  <ol class="bpost-list">
-    {{#each bposts as |bpost|}}
-    <li>
-      {{> bpost-info bpost }}
-    </li>
-    {{/each}}
-  </ol>
-</div>
+<div class="login-container">  
+    <div class="login-form-popup" id="loginForm">
+        <form action="/action_page.php" class="form-container">
+        <h1>Login</h1>
+
+        <label for="login"><b>Email or Username</b></label>
+        <input type="text" placeholder="Enter Email or Username" id="login" name="login" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" id="psw" name="psw" required>
+
+        <button onclick= "loginFormHandler()" type="submit" class="btn">Login</button>
+        </form>
+    </div>
+</div> 
 
 <footer>
   <a href="https://www.sellinglater.com">
@@ -40,3 +45,5 @@
   </a>
   <div class = "signup-bar">   
 </footer>
+
+<script src=".../public/javascript/login.js"></script>

@@ -21,17 +21,32 @@
  <button onclick="openRegisterForm()">Sign Up</button>
 </header>
 
-<div class = ></div>
+<div class = "searchbar">
+  <input id="city" type="text" placeholder="Search a city..">
+  <button id="city-search-submit" class="button">Search</button>
+  <div class="dropdown">
+    <button class="dropbtn">Price</button>
+    <div class="dropdown-price">
+      <p id="price1">$300,000-$449,999</p>
+      <p id="price2">$450,000-$599,999</p>
+      <p id="price3">$600,000-$749,999</p>
+      <p id="price4">$750,000-$899,999</p>
+      <p id="price5">$900,000-$1,049,999</p>
+      <p id="price6">$1,050,000+</p>
+    </div>
+  </div>
+  <button id="price-search-submit" class="button">Search</button>
+</div>
 
-<div class = "bpost-container">
-  <ol class="bpost-list">
-    {{#each bposts as |bpost|}}
+<div class ="hpost-container">
+  <ol class="hpost-list">
+    {{#each hposts as |hpost|}}
     <li>
-      {{> bpost-info bpost }}
+      {{> hpost-info hpost }}
     </li>
     {{/each}}
   </ol>
-</div>
+</div> 
 
 <footer>
   <a href="https://www.sellinglater.com">
