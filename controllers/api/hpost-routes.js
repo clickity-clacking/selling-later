@@ -69,6 +69,7 @@ router.post('/', (req, res) => {
 });
 
 router.put('/:id', (req, res) => {
+  console.log(req.body);
   HPost.update(
     {
         address: req.body.address,

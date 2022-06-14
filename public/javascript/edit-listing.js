@@ -1,7 +1,11 @@
 async function editFormHandler(event) {
     event.preventDefault();
+
+    
   
     const address = document.querySelector('input[name="address"]').value;
+
+    console.log('this button works');
     const sell_date = document.querySelector('input[name="sell_date"]').value;
     const post_url = document.querySelector('input[name="post_url"]').value;
     const price_floor = document.querySelector('input[name="price_floor"]').value;
@@ -36,4 +40,6 @@ async function editFormHandler(event) {
     }
   }
   
+ 
+
   document.querySelector('.new-listing-form').addEventListener('submit', editFormHandler);
