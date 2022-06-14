@@ -3,6 +3,9 @@ header {
   align-items: center;
 
 }
+h2 h5 {
+  text-align: center;
+}
 
 /* The navigation bar */
 .nav-bar {
@@ -124,12 +127,45 @@ width: 300px;
 .card {
   display: flex;
   flex-direction: column;
-  
+
   width: 300px;
-height: 400px;
+  height: 400px;
 }
+
 .cardcontainer{
   display: flex;
   flex-wrap: wrap;
+ border-style: double;
+ border-color: #555;
+  text-align: center;
+}
 
+.card-body{
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  text-align: center;
+  padding: 10px;
+}
+
+.card h5{
+  text-align: center;
+  text-decoration: none;
+}
+.plancontainer{
+  margin: 20px 20px 20px 20px;
+  display: block;
+  background-color: rgb(125, 173, 53);
+  text-align: center ;
+  width: 1250px;
+  height: 300px;
+ 
+
+}
+.joinbutton {
+ 
+  background-color: white;
+  color: #302f2f;
+height:50px;
+width:200px;
 }
