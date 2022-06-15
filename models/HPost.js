@@ -71,6 +71,14 @@ HPost.init(
       //   model: 'user',
       //   key: 'id'
       // }
+    },
+    geocode_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: 'geocode',
+        key: 'id'
+      }
     }
   },
   {
