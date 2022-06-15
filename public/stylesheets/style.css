@@ -169,3 +169,12 @@ width: 300px;
 height:50px;
 width:200px;
 }
+.new-listing-form{
+  display: flex;
+}
+
+.signup-bar{
+  display: block;
+  color: greenyellow;
+  text-align: center;
+}
