@@ -1,15 +1,4 @@
-// function priceFormHandler (event) {
-//     event.preventDefault();
-
-//     console.log("function was called");
-
-//     // fetch(`/api/hposts/`) 
-
-
-
-// }
-
-async function priceFormHandler(event) {
+async function priceFloorHandler(event) {
     event.preventDefault();
 
     const response = await fetch(`/api/hposts`, {
@@ -33,7 +22,18 @@ async function priceFormHandler(event) {
         } else if (event.target.value == "500000-700000") {
             const filteredData = data.filter(index => (index.price_floor >= 500000 && index.price_floor <= 700000))
             renderHtml(filteredData)
-        }
+        } else if (event.target.value == "700000-900000") {
+            const filteredData = data.filter(index => (index.price_floor >= 700000 && index.price_floor <= 900000))
+            renderHtml(filteredData)
+        } else if (event.target.value == "900000-1200000") {
+            const filteredData = data.filter(index => (index.price_floor >= 900000 && index.price_floor <= 1200000))
+            renderHtml(filteredData)
+        } else if (event.target.value == ">1200000") {
+            const filteredData = data.filter(index => (index.price_floor >= 1200000))
+            renderHtml(filteredData)
+        } else if (event.target.value == "-") {
+            document.location.replace('/listings/')
+        } 
         // (dbHPostData => {
         //     const searchposts = dbHPostData.map(searchposts => searchposts.get({ plain: true }));
         //     console.log(dbHPostData);
@@ -43,6 +43,69 @@ async function priceFormHandler(event) {
         alert(response.statusText);
     }
 }
+
+
+
+
+async function priceCeilingHandler(event) {
+    event.preventDefault();
+
+    const response = await fetch(`/api/hposts`, {
+        attributes: ['id', 'address', 'sell_date', 'post_url', 'price_floor', 'price_ceiling', 'beds', 'baths', 'sqft', 'created_at'],
+        order: [['created_at', 'DESC']],
+
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
+
+    if (response.ok) {
+        document.querySelector('.all-hposts').style.display = 'none';
+        //   document.location.replace('/listings/');
+        const data = await response.json()
+        // console.log(data)
+        // console.log(event.target.value)
+        if (event.target.value == "<500000") {
+            const filteredData = data.filter(index => index.price_ceiling < 500000)
+            renderHtml(filteredData)
+        } else if (event.target.value == "500000-700000") {
+            const filteredData = data.filter(index => (index.price_ceiling >= 500000 && index.price_ceiling <= 700000))
+            renderHtml(filteredData)
+        } else if (event.target.value == "700000-900000") {
+            const filteredData = data.filter(index => (index.price_ceiling >= 700000 && index.price_ceiling <= 900000))
+            renderHtml(filteredData)
+        } else if (event.target.value == "900000-1200000") {
+            const filteredData = data.filter(index => (index.price_ceiling >= 900000 && index.price_ceiling <= 1200000))
+            renderHtml(filteredData)
+        } else if (event.target.value == ">1200000") {
+            const filteredData = data.filter(index => (index.price_ceiling >= 1200000))
+            renderHtml(filteredData)
+        } else if (event.target.value == "-") {
+            document.location.replace('/listings/')
+        } 
+        // (dbHPostData => {
+        //     const searchposts = dbHPostData.map(searchposts => searchposts.get({ plain: true }));
+        //     console.log(dbHPostData);
+        //     res.render('listings', { searchposts });
+        //   })
+    } else {
+        alert(response.statusText);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function renderHtml(arr) {
     const postEl = document.querySelector(".searchposts");
@@ -72,4 +135,6 @@ function renderHtml(arr) {
 
 
 
-document.querySelector('.price-search').addEventListener('change', priceFormHandler);
+document.querySelector('.price-floor-search').addEventListener('change', priceFloorHandler);
+
+document.querySelector('.price-ceiling-search').addEventListener('change', priceCeilingHandler);
