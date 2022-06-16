@@ -1,6 +1,7 @@
-const router = require('express').Router();
+const router = require("express").Router();
 
-const apiRoutes = require('./api');
+const apiRoutes = require("./api/");
+const homeRoutes = require("./home-routes.js");
 
 const homeRoutes = require('./home-routes.js');
 const listingsRoutes = require('./listings-routes.js');
@@ -20,5 +21,6 @@ router.use('/edit-listing', editListingRoutes)
 
 
 
+router.use("/api", apiRoutes);
 
 module.exports = router;
