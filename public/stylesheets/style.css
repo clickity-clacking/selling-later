@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 header {
   display: flex;
   align-items: center;
@@ -15,20 +15,19 @@ h2 h5 {
     /* overflow: hidden; */
     /* background-color: rgb(240, 235, 235); */
     /* position: fixed; Set the navbar to fixed position */
-    /* top: 0; Position the navbar at the top of the page */
-=======
+    /* top: 0; Position the navbar at the top of the page */}
+
 /* The navigation bar */
 .navbar {
     overflow: hidden;
     background-color: #333;
     position: fixed; /* Set the navbar to fixed position */
     top: 0; /* Position the navbar at the top of the page */
->>>>>>> 6b689c6890b34d90bb7f1993f08027722ace4d7e
+
     width: 100%; /* Full width */
   }
   
   /* Links inside the navbar */
-<<<<<<< HEAD
   .nav-bar a {
     /* float: left; */
     display: block;
@@ -41,8 +40,7 @@ h2 h5 {
   
   /* Change background on mouse-over */
   .nav-bar a:hover {
-=======
-  .navbar a {
+  
     float: left;
     display: block;
     color: #f2f2f2;
@@ -53,7 +51,7 @@ h2 h5 {
   
   /* Change background on mouse-over */
   .navbar a:hover {
->>>>>>> 6b689c6890b34d90bb7f1993f08027722ace4d7e
+
     background: #ddd;
     color: black;
   }
@@ -63,11 +61,7 @@ h2 h5 {
     margin-top: 30px; /* Add a top margin to avoid content overlay */
   }
 
-<<<<<<< HEAD
-  /* {box-sizing: border-box;} */
-=======
   {box-sizing: border-box;}
->>>>>>> 6b689c6890b34d90bb7f1993f08027722ace4d7e
 
 /* Button used to open the contact form - fixed at the bottom of the page */
 .open-button {
@@ -82,7 +76,6 @@ h2 h5 {
   right: 28px;
   width: 280px;
 }
-<<<<<<< HEAD
 .logininfo{
   height: max-content;
   width: 100px;
@@ -98,9 +91,6 @@ h2 h5 {
 height: 150px;
 width: 300px;
 }
-=======
-
->>>>>>> 6b689c6890b34d90bb7f1993f08027722ace4d7e
 /* The popup form - hidden by default */
 .form-popup {
   display: none;

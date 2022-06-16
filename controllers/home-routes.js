@@ -1,15 +1,12 @@
-const router = require('express').Router();
-const sequelize = require('../config/connection');
-const { HPost, User } = require('../models');
+const router = require("express").Router();
+const sequelize = require("../config/connection");
+const { HPost, User } = require("../models");
 
-router.get('/', (req, res) => {
+router.get("/", (req, res) => {
   console.log(req.session);
-  console.log('======================');
-  res.render('main');
+  console.log("======================");
+  res.render("layouts/main.handlebars");
 });
-
-
-
 
 // router.get('/listings', (req, res) => {
 //   console.log('======================');
