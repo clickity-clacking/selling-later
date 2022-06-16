@@ -1,19 +1,23 @@
 // import all models
-const { post } = require("../controllers");
-const HPost = require("./HPost");
-const User = require("./user");
+const HPost = require('./HPost');
+const User = require('./User');
+
+
 
 User.hasMany(HPost, {
-  foreignKey: 'user_id'
-});
+    foreignKey: 'user_id'
+  });
 
 HPost.belongsTo(User, {
-  foreignKey: "user_Id",
-  onDelete: "CASCADE",
-});
+    foreignKey: 'user_id',
+    onDelete: 'SET NULL'
+  });
 
-module.exports = {
-  User,
-  HPost,
-};
- 
+// User.hasMany(HPost, {
+//     foreignKey: 'user_id',
+//     onDelete: 'SET NULL'
+//   });
+
+
+
+module.exports = { User, HPost };

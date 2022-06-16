@@ -34,7 +34,7 @@ HPost.init(
     // },
     price_floor: {
       type: DataTypes.INTEGER,
-      allowNull: true,
+      allowNull: false,
       // references: {
       //   model: 'user',
       //   key: 'id'
@@ -42,7 +42,7 @@ HPost.init(
     },
     price_ceiling: {
       type: DataTypes.INTEGER,
-      allowNull: true,
+      allowNull: false,
       // references: {
       //   model: 'user',
       //   key: 'id'
@@ -50,15 +50,15 @@ HPost.init(
     },
     beds: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: false,
       // references: {
-      //   model: "user",
-      //   key: "id",
-      // },
+      //   model: 'user',
+      //   key: 'id'
+      // }
     },
     baths: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
+      type: DataTypes.DECIMAL,
+      allowNull: false,
       // references: {
       //   model: 'user',
       //   key: 'id'
@@ -66,19 +66,27 @@ HPost.init(
     },
     sqft: {
       type: DataTypes.INTEGER,
-      allowNull: true,
+      allowNull: false,
       // references: {
       //   model: 'user',
       //   key: 'id'
       // }
     },
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id'
+      }
+
+    }
   },
 },
   {
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: "HPost",
+    modelName: 'hpost'
   }
 );
 

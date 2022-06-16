@@ -3,8 +3,8 @@
 </nav> --}}
 
 <div>
-      <label>Search By Price Range:</label>
-      <select name="price-search">
+      <label>Search By Price Floor:</label>
+      <select class="price-search" name="price-search">
         <option value="<500000">Under 500000</option>
         <option value="500000-700000">500000-700000</option>
         <option value="700000-900000">700000-900000</option>
@@ -12,7 +12,7 @@
       </select>
 </div>  
 
-<ol>
+<ol class="all-hposts">
 {{#each hposts as |hpost|}}
   <li>
     <article>
@@ -31,6 +31,26 @@
   {{/each}}
 </ol>
 
+<ol class="searchposts">
+{{!-- {{#each searchposts as |searchpost|}}
+  <li>
+    <article>
+      <div>
+        <h2>{{searchpost.address}}</h2>
+        <span>({{searchpost.post_url}})</span>
+      </div>
+      <div>Approx Sell Date: {{searchpost.sell_date}}</div>
+      <div>Price Range: {{searchpost.price_floor}} - {{searchpost.price_ceiling}}</div>
+      <div>{{hpost.beds}}Beds, {{searchpost.baths}}Ba</div>
+      <div>Sqft: {{sqft}}</div>
+      <div>by {{searchpost.user.username}} on {{searchpost.created_at}}</div>
+      
+    </article>
+  </li>
+  {{/each}} --}}
+</ol>
+
 {{!-- search.houses copy.handlebars --}}
 
 <script src="/javascript/listings.js"></script>
+<script src="/javascript/price-search.js"></script>

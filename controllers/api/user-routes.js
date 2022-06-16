@@ -1,5 +1,6 @@
-const router = require("express").Router();
-const { user, HPost } = require("../../models");
+const router = require('express').Router();
+const { User, HPost } = require('../../models');
+
 
 // get all users
 router.get("/", (req, res) => {
@@ -22,20 +23,9 @@ router.get("/:id", (req, res) => {
     include: [
       {
         model: HPost,
-        attributes: [
-          "id",
-          "address",
-          "sell_date",
-          "post_url",
-          "price_floor",
-          "price_ceiling",
-          "beds",
-          "baths",
-          "sqft",
-          "created_at",
-        ],
-      },
-    ],
+        attributes: ['id', 'address', 'sell_date', 'post_url', 'price_floor', 'price_ceiling', 'beds', 'baths', 'sqft', 'created_at']
+      }
+    ]
   })
     .then((dbUserData) => {
       if (!dbUserData) {
@@ -57,11 +47,15 @@ router.post("/", (req, res) => {
     email: req.body.email,
     password: req.body.password,
   })
-    .then((dbUserData) => res.json(dbUserData))
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json(err);
+  .then(dbUserData => {
+    req.session.save(() => {
+      req.session.user_id = dbUserData.id;
+      req.session.username = dbUserData.username;
+      req.session.loggedIn = true;
+  
+      res.json(dbUserData);
     });
+  })
 });
 
 router.post("/login", (req, res) => {
@@ -82,12 +76,31 @@ router.post("/login", (req, res) => {
       res.status(400).json({ message: "Incorrect password!" });
       return;
     }
+    
+    req.session.save(() => {
+      // declare session variables
+      req.session.user_id = dbUserData.id;
+      req.session.username = dbUserData.username;
+      req.session.loggedIn = true;
 
-    res.json({ user: dbUserData, message: "You are now logged in!" });
+      res.json({ user: dbUserData, message: 'You are now logged in!' });
+    });
   });
 });
 
-router.put("/:id", (req, res) => {
+router.post('/logout', (req, res) => {
+  if (req.session.loggedIn) {
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+  }
+  else {
+    res.status(404).end();
+  }
+
+});
+
+router.put('/:id', (req, res) => {
   // expects {username: 'Lernantino', email: 'lernantino@gmail.com', password: 'password1234'}
 
   // pass in req.body instead to only update what's passed through
