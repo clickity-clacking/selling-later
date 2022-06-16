@@ -1,14 +1,46 @@
+
+header {
+  display: flex;
+  align-items: center;
+
+}
+h2 h5 {
+  text-align: center;
+}
+
+/* The navigation bar */
+.nav-bar {
+  list-style-type: none;
+  display: flex;
+    /* overflow: hidden; */
+    /* background-color: rgb(240, 235, 235); */
+    /* position: fixed; Set the navbar to fixed position */
+    /* top: 0; Position the navbar at the top of the page */}
+
 /* The navigation bar */
 .navbar {
     overflow: hidden;
     background-color: #333;
     position: fixed; /* Set the navbar to fixed position */
     top: 0; /* Position the navbar at the top of the page */
+
     width: 100%; /* Full width */
   }
   
   /* Links inside the navbar */
-  .navbar a {
+  .nav-bar a {
+    /* float: left; */
+    display: block;
+    color: #3f3d3d;
+    text-align: center;
+    padding: 14px 16px;
+    
+
+  }
+  
+  /* Change background on mouse-over */
+  .nav-bar a:hover {
+  
     float: left;
     display: block;
     color: #f2f2f2;
@@ -19,6 +51,7 @@
   
   /* Change background on mouse-over */
   .navbar a:hover {
+
     background: #ddd;
     color: black;
   }
@@ -43,7 +76,21 @@
   right: 28px;
   width: 280px;
 }
+.logininfo{
+  height: max-content;
+  width: 100px;
+  background-color: #66d4ac;
 
+}
+
+.buyerinfo{
+  position: relative;
+  bottom: 150px;
+  background-color: transparent;
+  color: #f1f1f1;
+height: 150px;
+width: 300px;
+}
 /* The popup form - hidden by default */
 .form-popup {
   display: none;
@@ -96,4 +143,69 @@
 /* Add some hover effects to buttons */
 .form-container .btn:hover, .open-button:hover {
   opacity: 1;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 300px;
+  height: 400px;
+}
+.card-body{
+  display: block;
+  align-items: center;
+  text-align: center;
+}
+.card-title{
+  display: flex;
+  text-align: center;
+  color: #3e4140;
+}
+
+.cardcontainer{
+  display: flex;
+  flex-wrap: wrap;
+ border-style: double;
+ border-color: #555;
+  text-align: center;
+}
+
+.card-body{
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  text-align: center;
+  padding: 10px;
+}
+
+.card h5{
+  text-align: center;
+  
+}
+.plancontainer{
+  margin: 20px 20px 20px 20px;
+  display: block;
+  background-color: rgb(125, 173, 53);
+  text-align: center ;
+  width: 1250px;
+  height: 300px;
+ 
+
+}
+.joinbutton {
+ 
+  background-color: white;
+  color: #302f2f;
+height:50px;
+width:200px;
+}
+.new-listing-form{
+  display: flex;
+}
+
+.signup-bar{
+  display: block;
+  color: greenyellow;
+  text-align: center;
 }

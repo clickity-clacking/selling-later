@@ -9,10 +9,10 @@ async function deleteFormHandler(event) {
     });
   
     if (response.ok) {
-      document.location.replace('/edit-listing/');
+      document.location.replace('/new-listing/');
     } else {
       alert(response.statusText);
     }
   }
   
-  document.querySelector('.delete-post-btn').addEventListener('click', deleteFormHandler);
+  document.querySelector('.delete-hpost-btn').addEventListener('click', deleteFormHandler);
