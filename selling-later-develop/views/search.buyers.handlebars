@@ -1,0 +1,42 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selling Later</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<header>
+  <a href="https://www.sellinglater.com">
+  <img alt="Selling Later" src="public/images/logo.png"
+    width="150" height="70">
+  </a>
+  <ul class = "nav-bar">
+    <li><a href="default.asp">View Homes</a></li>
+    <li><a href="default.asp">Save</a></li>
+    <li><a href="default.asp">How It Works</a></li>
+    <li><a href="default.asp">Learn</a></li>
+    <li><a href="default.asp">Stories</a></li>
+  </ul>
+ <button onclick="openLoginForm()">Sign In</button>
+ <button onclick="openRegisterForm()">Sign Up</button>
+</header>
+
+<div class = ></div>
+
+<div class = "bpost-container">
+  <ol class="bpost-list">
+    {{#each bposts as |bpost|}}
+    <li>
+      {{> bpost-info bpost }}
+    </li>
+    {{/each}}
+  </ol>
+</div>
+
+<footer>
+  <a href="https://www.sellinglater.com">
+  <img alt="Selling Later" src="public/images/logo.png"
+    width="150" height="70">
+  </a>
+  <div class = "signup-bar">   
+</footer>

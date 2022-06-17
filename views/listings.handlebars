@@ -4,13 +4,62 @@
 
 <div>
       <label>Search By Price Floor:</label>
-      <select class="price-search" name="price-search">
+      <select class="price-floor-search" name="price-floor-search">
+        <option value="-">-</option>
+        <option value="<500000">Under 500000</option>
+        <option value="500000-700000">500000-700000</option>
+        <option value="700000-900000">700000-900000</option>
+        <option value="900000-1200000">900000-1200000</option>
+        <option value=">1200000">Over 1200000</option>
+      </select>
+</div>  
+
+<div>
+      <label>Search By Price Ceiling:</label>
+      <select class="price-ceiling-search" name="price-ceiling-search">
+        <option value="-">-</option>
         <option value="<500000">Under 500000</option>
         <option value="500000-700000">500000-700000</option>
         <option value="700000-900000">700000-900000</option>
         <option value="900000-1200000">900000-1200000</option>
       </select>
-</div>  
+</div>
+
+<div>
+      <label>Search By Bedrooms:</label>
+      <select class="bedrooms-search" name="bedrooms-search">
+        <option value="-">-</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4+">4+</option>
+      </select>
+</div>
+
+<div>
+      <label>Search By Bathrooms:</label>
+      <select class="bathrooms-search" name="bathrooms-search">
+        <option value="-">-</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4+">4+</option>
+      </select>
+</div>
+
+<div>
+      <label>Search By Sqft:</label>
+      <select class="sqft-search" name="sqft-search">
+        <option value="-">-</option>
+        <option value="<1000">Under 1000</option>
+        <option value="1000-1500">1000-1500</option>
+        <option value="1500-2000">1500-2000</option>
+        <option value="2000-2500">2000-2500</option>
+        <option value="2500-3000">2500-3000</option>
+        <option value="3000+">3000+</option>
+        
+      </select>
+</div>
 
 <ol class="all-hposts">
 {{#each hposts as |hpost|}}
@@ -32,25 +81,13 @@
 </ol>
 
 <ol class="searchposts">
-{{!-- {{#each searchposts as |searchpost|}}
-  <li>
-    <article>
-      <div>
-        <h2>{{searchpost.address}}</h2>
-        <span>({{searchpost.post_url}})</span>
-      </div>
-      <div>Approx Sell Date: {{searchpost.sell_date}}</div>
-      <div>Price Range: {{searchpost.price_floor}} - {{searchpost.price_ceiling}}</div>
-      <div>{{hpost.beds}}Beds, {{searchpost.baths}}Ba</div>
-      <div>Sqft: {{sqft}}</div>
-      <div>by {{searchpost.user.username}} on {{searchpost.created_at}}</div>
-      
-    </article>
-  </li>
-  {{/each}} --}}
+
 </ol>
 
 {{!-- search.houses copy.handlebars --}}
 
 <script src="/javascript/listings.js"></script>
 <script src="/javascript/price-search.js"></script>
+<script src="/javascript/bedrooms-search.js"></script>
+<script src="/javascript/bathrooms-search.js"></script>
+<script src="/javascript/sqft-search.js"></script>
