@@ -123,7 +123,7 @@ width: 150px;
 .form-container .btn:hover, .open-button:hover {
   opacity: 1;
 }
-
+/* changed color */
 .card {
   display: flex;
   flex-direction: column;
@@ -132,7 +132,7 @@ width: 150px;
   width: 300px;
   height: 400px;
   border-width: 2px;
-  border-color: #555 2px;
+  border-color: rgb(71, 127, 96) 2px;
   border-style: double;
   padding: 20px 20px 20px 20px;
 } 
