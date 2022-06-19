@@ -30,9 +30,12 @@
     <li><a href="default.asp">How It Works</a></li>
     <li><a href="default.asp">Learn</a></li>
     <li><a href="default.asp">Stories</a></li>
-    <button id="logout" class="btn-no-style">logout</button>    
-    <a href="/login">login</a>
+    {{#if loggedIn}}
+    <button id="logout" class="btn-no-style">logout</button> 
     <a href="/new-listing">My Listings</a>
+    {{else}}   
+    <a href="/login">login</a>
+    {{/if}}
   </nav>
 
       <main>
@@ -121,8 +124,9 @@
   </a>
   <div class = "signup-bar">   
 </footer>
-
+{{#if loggedIn}}
  <script src="/javascript/logout.js"></script>
+ {{/if}}
 </body>
 
 

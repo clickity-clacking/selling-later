@@ -5,7 +5,9 @@ const { HPost, User } = require('../models');
 router.get('/', (req, res) => {
   console.log(req.session);
   console.log('======================');
-  res.render('homepage');
+  res.render('homepage', {
+    loggedIn: req.session.loggedIn
+  });
 });
 
 
