@@ -3,6 +3,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Selling Later</title>
   <link rel="stylesheet" href="/stylesheets/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;400&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;400&family=Roboto+Condensed:ital,wght@1,300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;400&family=Libre+Franklin:ital,wght@0,400;1,200&family=Roboto+Condensed:ital,wght@1,300&display=swap" rel="stylesheet">
 </head>
 
 
@@ -20,7 +29,9 @@
     <li><a href="default.asp">Learn</a></li>
     <li><a href="default.asp">Stories</a></li>
   </ul>
- <button class="logininfo" onclick="openLoginForm()">Sign In</button>
+ <button class="logininfo" 
+ {{!-- onclick="openLoginForm()"> --}}
+ <a href="../login.signin.handlebars"></a>Sign In</button>
  <button class="logininfo"onclick="openRegisterForm()">Sign Up</button>
 </header>
   
@@ -32,7 +43,7 @@
  
 </div>
   <section>
-    <main>
+    <main class="sec-head">
       <h2> Connect, learn, and save money with the help of other future sellers and buyers</h2>
     </main>
   
@@ -43,7 +54,7 @@
         <h5 class="card-title">Tell Buyers When You're Selling</h5>
         <p class="card-text"> Future homebuyers are already on the hunt online.  Tell them now when you are selling.</p>
       </div>
-    <img class="card-img-bottom" src="..." alt="Card image cap">
+    <img class="card-img-bottom" src="images/market-in-advance.gif" alt="Card image cap">
     </div>
 
     <div class="card">
@@ -51,7 +62,7 @@
         <h5 class="card-title">Save Money</h5>
         <p class="card-text"> Get monthly tips on how to save money before you sell.</p>
       </div>
-    <img class="card-img-bottom" src="..." alt="Card image cap">
+    <img class="card-img-bottom" src="images/piggy-bank-savings.gif" alt="Card image cap">
     </div>
 
     <div class="card">
@@ -59,7 +70,7 @@
         <h5 class="card-title">Get Prepared</h5>
         <p class="card-text"> Use our unbiased resources to learn about buying or selling before you hit the market.</p>
       </div>
-    <img class="card-img-bottom" src="..." alt="Card image cap">
+    <img class="card-img-bottom" src="images/book-icon.gif" alt="Card image cap">
     </div>
 
     <div class="card">
@@ -67,15 +78,15 @@
         <h5 class="card-title">Data Privacy</h5>
         <p class="card-text"> The industry made $10 billion by selling your data last year.  We think that money belongs to you.</p>
       </div>
-    <img class="card-img-bottom" src="..." alt="Card image cap">
+    <img class="card-img-bottom" src="images/data-privacy-moving(1).gif" alt="Card image cap">
     </div>
 
     <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Directly Connect</h5>
+      <div class="card-body" >
+        <h5 class="card-title"id="text">Directly Connect</h5>
         <p class="card-text">All inquiries are sent directly to the homeowner and are never filtered through real estate agents.</p>
       </div>
-    <img class="card-img-bottom" src="..." alt="Card image cap">
+    <img class="card-img-bottom" src="images/handshake.gif" alt="Card image cap">
     </div>
 
     <div class="card">
@@ -83,7 +94,7 @@
         <h5 class="card-title">Made For You</h5>
         <p class="card-text">We are frustrated consumers, not agents, on a mission to make real estate affordable, accessible and transparent.</p>
       </div>
-    <img class="card-img-bottom" src="..." alt="Card image cap">
+    <img class="card-img-bottom" src="images/community-icon.png" alt="Card image cap">
     </div>
 </div>
     </section>

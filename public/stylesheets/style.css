@@ -1,4 +1,8 @@
-
+*{
+  font-family: 'Dosis', sans-serif;
+font-family: 'Libre Franklin', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;
+}
 header {
   display: flex;
   align-items: center;
@@ -31,9 +35,11 @@ h2 h5 {
   .nav-bar a {
     /* float: left; */
     display: block;
+   
     color: #3f3d3d;
     text-align: center;
     padding: 14px 16px;
+    
     
 
   }
@@ -43,18 +49,18 @@ h2 h5 {
   
     float: left;
     display: block;
-    color: #f2f2f2;
+    background-color: rgba(145, 197, 49, 0.874);
+    color: black;
     text-align: center;
-    padding: 14px 16px;
+   
     text-decoration: none;
   }
   
   /* Change background on mouse-over */
-  .navbar a:hover {
+  /* .navbar a:hover {
 
-    background: #ddd;
-    color: black;
-  }
+  
+  } */
   
   /* Main content */
   .main {
@@ -77,6 +83,8 @@ h2 h5 {
   width: 280px;
 }
 .logininfo{
+  position: relative;
+  left: 300px;
   height: max-content;
   width: 100px;
   background-color: #66d4ac;
@@ -99,6 +107,9 @@ width: 300px;
   right: 15px;
   border: 3px solid #f1f1f1;
   z-index: 9;
+}
+.sec-head{
+  text-align: center;
 }
 
 /* Add styles to the form container */
@@ -146,19 +157,21 @@ width: 300px;
 }
 
 .card {
-  display: flex;
-  flex-direction: column;
+  flex-basis: 25%;
+  margin-bottom: 16px;
+  flex-basis: calc(25% - 10px);
+  margin-left: 40px;
+  margin-bottom: 16px;
   text-align: center;
   width: 300px;
   height: 400px;
+  color: rgb(23, 24, 23);
+  background-color:rgba(145, 197, 49, 0.874);
+  padding: 10px 10px 10px 10px;
 }
-.card-body{
-  display: block;
-  align-items: center;
-  text-align: center;
-}
+
 .card-title{
-  display: flex;
+
   text-align: center;
   color: #3e4140;
 }
@@ -176,29 +189,52 @@ width: 300px;
   flex-wrap: wrap;
   text-align: center;
   text-align: center;
-  padding: 10px;
+}
+.card-text{
+  box-shadow: inset 0 0 0 0 #54b3d6;
+  color: #54b3d6;
+  margin: 0 -10px;
+  padding: 0 10px;
+  transition: color .5s ease-in-out, box-shadow .3s ease-in-out;
+
+}
+
+.card-text:hover {
+  box-shadow: inset 100px 0 0 0 #54b3d6;
+  color: white;
+
 }
 
 .card h5{
   text-align: center;
-  
+
+}
+.card-img-bottom{
+ position: relative;
+top: 100px;
 }
 .plancontainer{
+
   margin: 20px 20px 20px 20px;
-  display: block;
-  background-color: rgb(125, 173, 53);
+ 
+  background-color: rgba(145, 197, 49, 0.874);
   text-align: center ;
   width: 1250px;
   height: 300px;
- 
+
 
 }
+
 .joinbutton {
- 
+  position: relative;
+  top: 100px;
+  text-align: center;
   background-color: white;
   color: #302f2f;
 height:50px;
 width:200px;
+
+
 }
 .new-listing-form{
   display: flex;
