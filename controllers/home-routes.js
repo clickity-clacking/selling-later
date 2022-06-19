@@ -4,8 +4,10 @@ const { HPost, User } = require("../models");
 
 router.get("/", (req, res) => {
   console.log(req.session);
-  console.log("======================");
-  res.render("layouts/main.handlebars");
+  console.log('======================');
+  res.render('homepage', {
+    loggedIn: req.session.loggedIn
+  });
 });
 
 router.get('/login', (req, res) => {
