@@ -11,12 +11,12 @@ router.get('/', (req, res) => {
     include: [
       {
         model: User,
-        attributes: ["username"],
-      },
-    ],
+        attributes: ['username']
+      }
+    ]
   })
-    .then((dbPostData) => res.json(dbPostData))
-    .catch((err) => {
+    .then(dbPostData => res.json(dbPostData))
+    .catch(err => {
       console.log(err);
       res.status(500).json(err);
     });
@@ -25,24 +25,24 @@ router.get('/', (req, res) => {
 router.get('/:id', (req, res) => {
   HPost.findOne({
     where: {
-      id: req.params.id,
+      id: req.params.id
     },
     attributes: ['id', 'address', 'sell_date', 'post_url', 'price_floor', 'price_ceiling', 'beds', 'baths', 'sqft', 'created_at'],
     include: [
       {
         model: User,
-        attributes: ["username"],
-      },
-    ],
+        attributes: ['username']
+      }
+    ]
   })
-    .then((dbPostData) => {
+    .then(dbPostData => {
       if (!dbPostData) {
-        res.status(404).json({ message: "No post found with this id" });
+        res.status(404).json({ message: 'No post found with this id' });
         return;
       }
       res.json(dbPostData);
     })
-    .catch((err) => {
+    .catch(err => {
       console.log(err);
       res.status(500).json(err);
     });
@@ -61,8 +61,8 @@ router.post('/', (req, res) => {
     sqft: req.body.sqft,
     user_id: req.session.user_id
   })
-    .then((dbPostData) => res.json(dbPostData))
-    .catch((err) => {
+    .then(dbPostData => res.json(dbPostData))
+    .catch(err => {
       console.log(err);
       res.status(500).json(err);
     });
@@ -83,18 +83,18 @@ router.put('/:id', (req, res) => {
     },
     {
       where: {
-        id: req.params.id,
-      },
+        id: req.params.id
+      }
     }
   )
-    .then((dbPostData) => {
+    .then(dbPostData => {
       if (!dbPostData) {
-        res.status(404).json({ message: "No post found with this id" });
+        res.status(404).json({ message: 'No post found with this id' });
         return;
       }
       res.json(dbPostData);
     })
-    .catch((err) => {
+    .catch(err => {
       console.log(err);
       res.status(500).json(err);
     });
@@ -103,17 +103,17 @@ router.put('/:id', (req, res) => {
 router.delete('/:id', (req, res) => {
   HPost.destroy({
     where: {
-      id: req.params.id,
-    },
+      id: req.params.id
+    }
   })
-    .then((dbPostData) => {
+    .then(dbPostData => {
       if (!dbPostData) {
-        res.status(404).json({ message: "No post found with this id" });
+        res.status(404).json({ message: 'No post found with this id' });
         return;
       }
       res.json(dbPostData);
     })
-    .catch((err) => {
+    .catch(err => {
       console.log(err);
       res.status(500).json(err);
     });
