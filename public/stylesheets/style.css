@@ -103,13 +103,19 @@ h2 h5 {
 .delete-hpost-btn{
   background-color: rgb(23, 24, 23);
   color: #f1f1f1;
-height: 150px;
-width: 300px;
+  height: 20px;
+  width: 100px;
 }
 .new-listing-form{
+  display: flexbox;
+  align-items: center;
   background-color: rgba(145, 197, 49, 0.874);
- 
-
+}
+.form-row{
+  display: flexbox;
+  align-items: center;
+  justify-content: space-around;
+  padding: 15px;
 }
 /* The popup form - hidden by default */
 .form-popup {
