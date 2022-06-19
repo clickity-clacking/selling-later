@@ -1,38 +1,131 @@
-
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Selling Later</title>
-  {{!-- <link rel="stylesheet" href="/stylesheets/style.css"> --}}
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;400&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;400&family=Roboto+Condensed:ital,wght@1,300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;400&family=Libre+Franklin:ital,wght@0,400;1,200&family=Roboto+Condensed:ital,wght@1,300&display=swap" rel="stylesheet">
 </head>
 
+
+
 <body>
-  <div class="wrapper">
-    <header>
-      <h1>
-        <a href="/">Selling Later</a>
-      </h1>
-    </header>
-    <nav>
-        <a href="/listings">Show Listings</a>
-        {{!-- {{#if loggedIn}} --}}
-        <a href="/new-listing">Create New Listing</a>
-        {{!-- <a href="/dashboard">dashboard</a> --}}
-        <button id="logout" class="btn-no-style">logout</button>
-        {{!-- {{else}} --}}
-        <a href="/login">login</a>
-        {{!-- {{/if}} --}}
-    </nav>
-    <main>
+  <header>
+  <a href="/">
+  <img alt="Selling Later" src="/images/logo.png"
+    width="150" height="70">
+  </a>
+  </header>
+  
+  <nav class = "nav-bar">
+    <li><a href="/listings">View Homes</a></li>
+    <li><a href="default.asp">Save</a></li>
+    <li><a href="default.asp">How It Works</a></li>
+    <li><a href="default.asp">Learn</a></li>
+    <li><a href="default.asp">Stories</a></li>
+    <button id="logout" class="btn-no-style">logout</button>    
+    <a href="/login">login</a>
+    <a href="/new-listing">My Listings</a>
+  </nav>
+
+      <main>
       {{{ body }}}
     </main>
-    <footer>
-      Thanks for visiting!
-    </footer>
-  </div>
+  
+{{!-- <div class="wrapper">
+  
+    <img src="/assets/images/selling-later-promo.png" alt="" width="1250px" height="500px">
+    <button class="buyerinfo" type="button">Tell Buyers Now</button>
+    <button class="buyerinfo" type="button">Learn How To Save</button> --}}
+ 
+{{!-- </div>
+  <section>
+    <main>
+      <h2> Connect, learn, and save money with the help of other future sellers and buyers</h2>
+    </main>
+  
+  <div class="cardcontainer">
 
-  <script src="/javascript/logout.js"></script>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Tell Buyers When You're Selling</h5>
+        <p class="card-text"> Future homebuyers are already on the hunt online.  Tell them now when you are selling.</p>
+      </div>
+    <img class="card-img-bottom" src="..." alt="Card image cap">
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Save Money</h5>
+        <p class="card-text"> Get monthly tips on how to save money before you sell.</p>
+      </div>
+    <img class="card-img-bottom" src="..." alt="Card image cap">
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Get Prepared</h5>
+        <p class="card-text"> Use our unbiased resources to learn about buying or selling before you hit the market.</p>
+      </div>
+    <img class="card-img-bottom" src="..." alt="Card image cap">
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Data Privacy</h5>
+        <p class="card-text"> The industry made $10 billion by selling your data last year.  We think that money belongs to you.</p>
+      </div>
+    <img class="card-img-bottom" src="..." alt="Card image cap">
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Directly Connect</h5>
+        <p class="card-text">All inquiries are sent directly to the homeowner and are never filtered through real estate agents.</p>
+      </div>
+    <img class="card-img-bottom" src="..." alt="Card image cap">
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Made For You</h5>
+        <p class="card-text">We are frustrated consumers, not agents, on a mission to make real estate affordable, accessible and transparent.</p>
+      </div>
+    <img class="card-img-bottom" src="..." alt="Card image cap">
+    </div>
+</div>
+    </section>
+  </section>
+
+  <div class="plancontainer">
+    <h3>Free monthly plans and money savings tips</h3>
+    <h4>to help you prepare to buy or sell</h4>
+    <form action="https://google.com">
+        <input class="joinbutton" type="submit" value="Join and save" />
+    </form>    
+  </div> --}}
+
+ 
+
+<footer>
+  <a href="https://www.sellinglater.com">
+  <img alt="Selling Later" src="/images/logo.png"
+    width="150" height="70">
+  </a>
+  <div class = "signup-bar">   
+</footer>
+
+ <script src="/javascript/logout.js"></script>
 </body>
 
-</html>
+
+
+{{!-- <script src="/javascript/login.js"></script> --}}
+{{!-- <script src="/javascript/register.js"></script> --}}
