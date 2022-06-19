@@ -99,6 +99,17 @@ h2 h5 {
 height: 150px;
 width: 300px;
 }
+.delete-hpost-btn{
+  background-color: rgb(23, 24, 23);
+  color: #f1f1f1;
+height: 150px;
+width: 300px;
+}
+.new-listing-form{
+  background-color: rgba(145, 197, 49, 0.874);
+ 
+
+}
 /* The popup form - hidden by default */
 .form-popup {
   display: none;
@@ -243,5 +254,9 @@ width:200px;
 .signup-bar{
   display: block;
   color: greenyellow;
+  text-align: center;
+}
+.all-hposts{
+  display: flex;
   text-align: center;
 }
