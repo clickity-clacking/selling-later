@@ -94,9 +94,11 @@ h2 h5 {
   position: relative;
   bottom: 150px;
   background-color: transparent;
-  color: #f1f1f1;
-height: 150px;
-width: 300px;
+  color: rgba(145, 197, 49, 0.874);
+  height: 150px;
+  width: 300px;
+  font-size: 30px;
+  font-weight: bold;
 }
 .delete-hpost-btn{
   background-color: rgb(23, 24, 23);
@@ -181,9 +183,10 @@ width: 300px;
 }
 
 .card-title{
-
   text-align: center;
   color: #3e4140;
+  font-size: 25px;
+  width: 100%;
 }
 
 .cardcontainer{
