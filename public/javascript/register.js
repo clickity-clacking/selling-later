@@ -1,7 +1,3 @@
-function openRegisterForm() {
-    document.location.assign('/dashboard/');
-}
-
 async function registerFormHandler() {
 
     const email = document.querySelector('#email').value.trim();
@@ -22,12 +18,9 @@ async function registerFormHandler() {
 
         if (response.ok) {
         //will take us to 
-        document.location.assign('/dashboard/');
+        document.location.assign('/');
         } else {
         alert(response.statusText);
         }
     }
 }
-  
-document.querySelector('.register-form-popup').addEventListener('submit', signupFormHandler);
-  

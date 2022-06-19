@@ -8,6 +8,15 @@ router.get("/", (req, res) => {
   res.render("layouts/main.handlebars");
 });
 
+router.get('/login', (req, res) => {
+  // if (req.session.loggedIn) {
+  //   res.redirect('/');
+  //   return;
+  // }
+
+  res.render('login');
+});
+
 // router.get('/listings', (req, res) => {
 //   console.log('======================');
 //   HPost.findAll({

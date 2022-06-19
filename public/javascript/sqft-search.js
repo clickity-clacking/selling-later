@@ -77,3 +77,4 @@ function renderHtml(arr) {
 
 
 document.querySelector('.sqft-search').addEventListener('change', sqftHandler);
+
