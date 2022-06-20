@@ -16,7 +16,10 @@ router.get('/', (req, res) => {
     })
     .then(dbHPostData => {
       const hposts = dbHPostData.map(hpost => hpost.get({ plain: true }));
-      res.render('listings', { hposts });
+      res.render('listings', { 
+        hposts,
+        loggedIn: req.session.loggedIn
+      });
     })
     .catch(err => {
       console.log(err);
