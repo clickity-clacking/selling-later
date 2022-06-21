@@ -84,6 +84,8 @@ h2 h5 {
   width: 280px;
 }
 .logininfo{
+  position: relative;
+  left: 300px;
   height: max-content;
   width: 100px;
   background-color: #66d4ac;
@@ -97,6 +99,17 @@ h2 h5 {
   color: #f1f1f1;
 height: 150px;
 width: 300px;
+}
+.delete-hpost-btn{
+  background-color: rgb(23, 24, 23);
+  color: #f1f1f1;
+height: 150px;
+width: 300px;
+}
+.new-listing-form{
+  background-color: rgba(145, 197, 49, 0.874);
+ 
+
 }
 /* The popup form - hidden by default */
 .form-popup {

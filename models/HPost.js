@@ -1,11 +1,11 @@
-const { Model, DataTypes } = require ("sequelize");
-const sequelize = require("../config/connection");
+const { Model, DataTypes } = require('sequelize');
+const sequelize = require('../config/connection');
 
 // create our Post model
 class HPost extends Model {
-  checkPassword(loginPw) {
-    return bcrypt.compareSync(loginPw, this.password);
-  }
+    checkPassword(loginPw) {
+        return bcrypt.compareSync(loginPw, this.password);
+      }
 }
 
 // create fields/columns for Post model
@@ -13,25 +13,25 @@ HPost.init(
   {
     id: {
       type: DataTypes.INTEGER,
-      allowNull: true,
+      allowNull: false,
       primaryKey: true,
-      autoIncrement: true,
+      autoIncrement: true
     },
     address: {
       type: DataTypes.STRING,
-      allowNull: true,
+      allowNull: false
     },
     sell_date: {
       type: DataTypes.STRING,
-      allowNull: true,
+      allowNull: false
     },
     post_url: {
       type: DataTypes.STRING,
-      allowNull: true,
-    //   validate: {
-    //     isURL: true,
-    //   },
-    // },
+      allowNull: false,
+      validate: {
+        isURL: true
+      }
+    },
     price_floor: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -81,7 +81,6 @@ HPost.init(
 
     }
   },
-},
   {
     sequelize,
     freezeTableName: true,
