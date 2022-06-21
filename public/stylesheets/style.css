@@ -107,6 +107,14 @@ width: 200px;
 height: 150px;
 width: 300px;
 }
+
+.delete-hpost-btn{
+  background-color: rgb(23, 24, 23);
+  color: #f1f1f1;
+height: 150px;
+width: 300px;
+}
+
 .new-listing-form{
   background-color: rgba(145, 197, 49, 0.874);
  
@@ -185,7 +193,8 @@ width: 300px;
   padding: 10px 10px 10px 10px;
 }
 
-.card-title {
+
+.card-title{
   text-align: center;
   color: #3e4140;
  font-size: larger;
@@ -266,6 +275,7 @@ background-color: rgba(145, 197, 49, 0.874);
   color: greenyellow;
   text-align: center;
 }
+
 .all-hposts{
   display: block;  
   grid-template-columns: 100px;
@@ -332,3 +342,9 @@ top: 10px;
  padding: 2%;
  display: block;
 }
+
+/* .all-hposts{
+  display: flex;
+  text-align: center;
+} */
+
