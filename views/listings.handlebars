@@ -1,9 +1,9 @@
 {{!-- <nav>
   <a href="/new-listing">Create New Listing</a>
 </nav> --}}
-
+<section class="listing-search">
 <div>
-      <label>Search By Price Floor:</label>
+      <label class="search-title">Search By Price Floor:</label>
       <select class="price-floor-search" name="price-floor-search">
         <option value="-">-</option>
         <option value="<500000">Under 500000</option>
@@ -15,7 +15,7 @@
 </div>  
 
 <div>
-      <label>Search By Price Ceiling:</label>
+      <label class="search-title">Search By Price Ceiling:</label>
       <select class="price-ceiling-search" name="price-ceiling-search">
         <option value="-">-</option>
         <option value="<500000">Under 500000</option>
@@ -26,7 +26,7 @@
 </div>
 
 <div>
-      <label>Search By Bedrooms:</label>
+      <label class="search-title">Search By Bedrooms:</label>
       <select class="bedrooms-search" name="bedrooms-search">
         <option value="-">-</option>
         <option value="1">1</option>
@@ -37,7 +37,7 @@
 </div>
 
 <div>
-      <label>Search By Bathrooms:</label>
+      <label class="search-title">Search By Bathrooms:</label>
       <select class="bathrooms-search" name="bathrooms-search">
         <option value="-">-</option>
         <option value="1">1</option>
@@ -48,7 +48,7 @@
 </div>
 
 <div>
-      <label>Search By Sqft:</label>
+      <label class="search-title">Search By Sqft:</label>
       <select class="sqft-search" name="sqft-search">
         <option value="-">-</option>
         <option value="<1000">Under 1000</option>
@@ -60,6 +60,7 @@
         
       </select>
 </div>
+</section>
 
 <ol class="all-hposts">
 {{#each hposts as |hpost|}}
