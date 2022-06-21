@@ -257,6 +257,22 @@ width:200px;
   text-align: center;
 }
 .all-hposts{
-  display: flex;
+  display: block;  
+  grid-template-columns: 100px;
   text-align: center;
+  /* flex-basis: 25%; */
+  margin-bottom: 16px;
+  /* flex-basis: calc(25% - 10px); */
+  margin-left: 40px;
+  margin-bottom: 16px;
+  text-align: center;
+  width: 1000px;
+  height: 2400px;
+  color: rgb(23, 24, 23);
+  background-color:rgba(145, 197, 49, 0.874);
+  padding: 10px 10px 10px 10px;
+}
+.searchpost{
+  display: flex;
+  grid-template-columns: 100px;
 }
