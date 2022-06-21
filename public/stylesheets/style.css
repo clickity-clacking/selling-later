@@ -94,18 +94,28 @@ h2 h5 {
 
 .buyerinfo{
   position: relative;
-  bottom: 150px;
+  top: 10px;
   background-color: transparent;
-  color: #f1f1f1;
-height: 150px;
-width: 300px;
+  color: #3f3b3b;
+height: 25px;
+width: 200px;
+
 }
+
 .delete-hpost-btn{
   background-color: rgb(23, 24, 23);
   color: #f1f1f1;
 height: 150px;
 width: 300px;
 }
+
+.delete-hpost-btn{
+  background-color: rgb(23, 24, 23);
+  color: #f1f1f1;
+height: 150px;
+width: 300px;
+}
+
 .new-listing-form{
   background-color: rgba(145, 197, 49, 0.874);
  
@@ -119,6 +129,11 @@ width: 300px;
   right: 15px;
   border: 3px solid #f1f1f1;
   z-index: 9;
+}
+.sec-head{
+  text-align: center;
+  margin: 30px;
+  font-size: larger;
 }
 
 /* Add styles to the form container */
@@ -179,10 +194,11 @@ width: 300px;
   padding: 10px 10px 10px 10px;
 }
 
-.card-title{
 
+.card-title{
   text-align: center;
   color: #3e4140;
+ font-size: larger;
 }
 
 .cardcontainer{
@@ -246,14 +262,88 @@ width:200px;
 
 }
 .new-listing-form{
+  position: relative;
+  border-style: ridge;
+  padding: 15px;
   display: flex;
+background-color: rgba(145, 197, 49, 0.874);
+  height: 45%;
+
 }
 
 .signup-bar{
-  display: block;
+  display: inline;
   color: greenyellow;
   text-align: center;
 }
+
+.all-hposts{
+  display: block;  
+  grid-template-columns: 100px;
+  text-align: center;
+  /* flex-basis: 25%; */
+  margin-bottom: 16px;
+  /* flex-basis: calc(25% - 10px); */
+  margin-left: 40px;
+  margin-bottom: 16px;
+  text-align: left;
+  width: 1000px;
+  height: 2400px;
+  color: rgb(23, 24, 23);
+  /* background-color:rgba(145, 197, 49, 0.874); */
+  padding: 10px 10px 10px 10px;
+}
+.searchpost{
+  display: flex;
+  grid-template-columns: 100px;
+}
+.login-form, .signup-form{
+  
+  border-style: ridge;
+  border-radius: 3px grey;
+  /* display: inline-block; */
+  padding: 20px;
+}
+#btn-submit, #email-login, #username-signup, #email-signup, #password-signup {
+  margin: 10px;
+  }
+#btn-submit{
+  position: relative;
+  left: 140px;
+  background-color:rgba(145, 197, 49, 0.874) ;
+}
+#logout, #loginbtn{
+  position: absolute;
+  left: 80%;
+  background-color:rgba(145, 197, 49, 0.874) ;
+  padding: 5px 20px;
+  display: inline;
+}
+.listing-search{
+  position: relative;
+  border-style: ridge;
+  padding: 15px;
+  display: flex;
+background-color: rgba(145, 197, 49, 0.874);
+  height: 7%;
+}
+.search-title{
+  size: 10px;
+  border: #3e4140;
+  border-style: outset;
+  background-color: white;
+  padding: 2%;
+ 
+}
+.price-floor-search, .price-ceiling-search, .bedrooms-search, .bathrooms-search, .sqft-search{
+position: relative;
+top: 10px;
+}
+.nlform{
+ padding: 2%;
+ display: block;
+}
+
 /* .all-hposts{
   display: flex;
   text-align: center;

@@ -23,6 +23,7 @@
     width="150" height="70">
   </a>
   </header>
+
   
   <nav class = "nav-bar">
     <li><a href="/listings">View Homes</a></li>
@@ -34,7 +35,7 @@
     <button id="logout" class="btn-no-style">logout</button> 
     <a href="/new-listing">My Listings</a>
     {{else}}   
-    <a href="/login">login</a>
+    <a id="loginbtn" href="/login">login</a>
     {{/if}}
   </nav>
 
@@ -42,6 +43,7 @@
       {{{ body }}}
     </main>
   
+
 {{!-- <div class="wrapper">
   
     <img src="/assets/images/selling-later-promo.png" alt="" width="1250px" height="500px">
