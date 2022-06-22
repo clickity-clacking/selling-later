@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
     order: [['created_at', 'DESC']],
     include: [
       // Join geocode lat, lon coordinates
-      
+      w
       /*
       {
         model: Geocode,
